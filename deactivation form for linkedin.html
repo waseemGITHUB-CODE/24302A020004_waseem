@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Deactivation Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        width: 300px;
+        margin: 30px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea, select {
+        width: 100%;
+        padding: 5px;
+        margin-top: 3px;
+    }
+    button {
+        margin-top: 15px;
+        padding: 8px;
+        background: #0077b5;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center; font-family:Verdana;">LinkedIn Account Deactivation</h2>
+
+<form>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="reason">Reason for Deactivation</label>
+    <select id="reason" name="reason" required>
+        <option value="">Select reason</option>
+        <option value="privacy">Privacy concerns</option>
+        <option value="notuseful">Not useful</option>
+        <option value="spam">Too many emails/notifications</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="feedback">Additional Feedback (optional)</label>
+    <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+    <button type="submit">Deactivate Account</button>
+</form>
+
+</body>
+</html>
