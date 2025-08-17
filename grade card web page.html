@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MBU Grade Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 50px;   /* gap between logo and text */
+    }
+    .header-left img {
+      height: 100px;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 35px;
+      color: #050505;
+      text-align: center;
+    }
+    .header-text p {
+      margin: 1px 0;
+      font-size: 15px;
+      text-align: center;
+    }
+    .header-right img {
+      height: 150px;
+      width: 150px;
+      border: 1px solid #ffffff;
+      object-fit: cover;
+      transform: translateY(40px);  /* move image down without shifting text */
+    }
+    .title {
+      text-align: center;
+      margin: 0px 0;
+    }
+    .title h2 {
+      margin-top: 0px;  /* ✅ adjust this value for upper gap */
+      margin-bottom: 0;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .title p {
+      margin: 2px 0;
+      font-size: 14px;
+    }
+
+    /* Student info */
+    .student-info {
+      margin: 15px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 100px;
+      row-gap: 5px;     
+      line-height: 1.4;
+    }
+    .student-info p {
+      margin: 0;
+    }
+    .student-info .program {
+      white-space: nowrap;
+    }
+
+    /* Subjects */
+    .subjects {
+      margin: 20px 0;
+      border-top: 1px solid #070707;
+      border-bottom: 1px solid #030303;
+    }
+    .subject-header, .subject-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 80px 100px 70px;
+      padding: 8px 5px;
+      align-items: center;
+    }
+    .subject-header {
+      background: #fefefe;
+      font-weight: bold;
+      border-bottom: 1px solid #000;
+    }
+    .subject-row div {
+      padding: 2px 5px;
+    }
+    .subject-row .code, .subject-row .name {
+      text-align: left;
+    }
+    .subject-row div:not(.code):not(.name) {
+      text-align: center;
+    }
+
+    /* Summary */
+    .summary {
+      margin: 20px 0;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      padding: 10px 5px;
+    }
+    .summary-row {
+      display: grid;
+      grid-template-columns: 1fr 100px 120px 100px;
+      padding: 6px 0;
+      align-items: center;
+    }
+    .summary-row div {
+      padding: 2px 6px;
+    }
+    .summary-row .label {
+      font-weight: bold;
+    }
+
+    /* Box style */
+    .box {
+      border: 1px solid #000;
+      padding: 2px 10px;
+      display: inline-block;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .date {
+      margin-top: 25px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <img src="MBU2.jpg" alt="MBU Logo"> <!-- replace with logo -->
+      <div class="header-text">
+        <h1>MOHAN BABU UNIVERSITY</h1>
+        <p>Sree Sainath Nagar, Tirupati – 517 102, A.P.</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <img src="my id card pic.jpg" alt="Student Photo"> <!-- replace with photo -->
+    </div>
+  </div>
+
+  <div class="title">
+    <h2>GRADE CARD</h2>
+    <p>III-Semester - Batch-II&nbsp;&nbsp; Nov-2024</p>
+  </div>
+
+  <div class="student-info">
+    <p><b>Student Name :</b> M D WASEEM</p>
+    <p><b>Father's Name :</b> S ASLAM BASHA</p>
+    <p><b>Roll Number :</b> 24302A020004</p>
+    <p><b>Academic Year :</b> 2024-2025</p>
+    <p class="program"><b>Program Name :</b> B.Tech. - Computer Science and Engineering (Cyber Security)</p>
+    <p><b>Mother's Name :</b> S HASEENA</p>
+  </div>
+
+  <!-- Subjects Section -->
+  <div class="subjects">
+    <div class="subject-header">
+      <div>Course Code</div>
+      <div>Course Name</div>
+      <div>Credits</div>
+      <div>Grade Point</div>
+      <div>Grade</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22AI101019M</div>
+      <div class="name">FOUNDATIONS OF OPERATING SYSTEMS</div>
+      <div>3</div>
+      <div>10</div>
+      <div>O</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22CS102002</div>
+      <div class="name">PYTHON PROGRAMMING</div>
+      <div>4</div>
+      <div>9</div>
+      <div>A+</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22CS102003</div>
+      <div class="name">DATA STRUCTURES</div>
+      <div>4</div>
+      <div>8</div>
+      <div>A</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22MM101405</div>
+      <div class="name">NUMERICAL METHODS, PROBABILITY AND STATISTICS</div>
+      <div>3</div>
+      <div>6</div>
+      <div>B</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22CB102002</div>
+      <div class="name">COMPUTER NETWORKS</div>
+      <div>4</div>
+      <div>9</div>
+      <div>A+</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22LG201701</div>
+      <div class="name">PERSONALITY DEVELOPMENT</div>
+      <div>3</div>
+      <div>10</div>
+      <div>O</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22CM101402M</div>
+      <div class="name">PRINCIPLES OF BUSINESS ECONOMICS AND ACCOUNTANCY</div>
+      <div>3</div>
+      <div>10</div>
+      <div>O</div>
+    </div>
+
+    <div class="subject-row">
+      <div class="code">22AB107601</div>
+      <div class="name">NSS ACTIVITIES*</div>
+      <div>2</div>
+      <div>10</div>
+      <div>O</div>
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="summary">
+    <div class="summary-row">
+      <div class="label"><b>Credits Registered / Completed</b></div>
+      <div><span class="box">29 / 29</span></div>
+      <div class="label"><b>SGPA</b></div>
+      <div><span class="box">8.54</span></div>
+    </div>
+    <div class="summary-row">
+      <div class="label"><b>Credits Registered</b></div>
+      <div><span class="box">29</span></div>
+      <div class="label"><b>CGPA</b></div>
+      <div><span class="box">8.54</span></div>
+    </div>
+    <div class="summary-row">
+      <div class="label"><b>Credits Completed</b></div>
+      <div><span class="box">29</span></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><b>Note -</b> Please refer to the University's regulation document, which outlines the official grading scale and associated criteria.</p>
+    <p>The other symbols and reports used are as follows:</p>
+    <p>SGPA: Semester Grade Point Average &nbsp;&nbsp;&nbsp; CGPA: Cumulative Grade Point Average</p>
+    <p><b>Disclaimer:</b> The student will be wholly responsible for the consistency of data in the grade-sheet while submitting to the third parties.</p>
+  </div>
+
+  <div class="date">
+    <b>Date:</b> 11/03/2025
+  </div>
+
+</body>
+</html>

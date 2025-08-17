@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Work Time Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #453f3f;
+            color: rgb(3, 3, 3);
+        }
+        .day {
+            background-color: #453f3f; /* Red shade for days */
+            color: rgb(3, 3, 3);
+            font-weight: bold;
+        }
+        .break {
+            background-color: #453f3f;
+            font-weight: bold;
+        }
+        img {
+            width: 60px;
+            height: auto;
+            float: left;
+            margin: 10px;
+        }
+        h1 {
+            color: red;
+            margin: 0;
+        }
+        h3, h4 {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 90%; margin: center; display: flex; align-items: center; justify-content: center; gap: 15px;">
+        <img src="MBU2.jpg" alt="MBU Logo" style="height: 70px; width: auto; margin-top: -100px;">
+        <div>
+            <h1 style="color: red; margin: 0;">MOHAN BABU UNIVERSITY</h1>
+            <h3 style="margin: 0;">Sree Sainath Nagar, A. Rangampet-517102</h3>
+            <h3 style="margin: 0;">SCHOOL OF COMPUTING</h3>
+            <h4 style="margin: 0;"><u>DEPARTMENT OF DATA SCIENCE</u></h4>
+            <h4 style="margin: 0;"><u>CLASS WORK TIME TABLE (2025-26)</u></h4>
+            <p style="margin: 0;">V Semester (CS-2)<br>Room No.: 516 &nbsp; W.E.F.: 28.07.2025</p>
+        </div>
+    </div>
+</body>
+
+    <style>
+    th.break {
+        writing-mode: vertical-rl; /* makes text vertical */
+        text-orientation: upright; /* keeps letters upright */
+        padding: 10px;
+        background-color: #453f3f; /* optional, match your style */
+    }
+</style>
+
+<table border="1">
+        <tr>
+            <th>DAY / HR</th>
+            <th>11:10AM TO 12:05PM</th>
+            <th>12:05PM TO 01:00PM</th>
+            <th class="break" rowspan="6">LUNCH BREAK</th>
+            <th>02:15PM TO 03:10PM</th>
+            <th>03:10PM TO 04:05PM</th>
+            <th class="break" rowspan="6">BREAK</th>
+            <th>04:15PM TO 05:10PM</th>
+            <th>05:10PM TO 06:05PM</th>
+        </tr>
+        <tr>
+            <td class="day">MON</td>
+            <td colspan="2">QAVA</td>
+            <td colspan="2">ML LAB</td>
+            <td>SSE (MOOC)</td>
+            <td>LIB</td>
+        </tr>
+        <tr>
+            <td class="day">TUE</td>
+            <td colspan="2">QAVA</td>
+            <td colspan="2">CP Room No. 1810</td>
+            <td>WT</td>
+            <td>CAO (MOOC)</td>
+        </tr>
+        <tr>
+            <td class="day">WED</td>
+            <td>CSE</td>
+            <td>WT</td>
+            <td colspan="2">WT LAB</td>
+            <td>SSE (MOOC)</td>
+            <td>CAO (MOOC)</td>
+        </tr>
+        <tr>
+            <td class="day">THU</td>
+            <td colspan="2">CP Room No. 1810</td>
+            <td>CSE</td>
+            <td>ML</td>
+            <td>CAO (MOOC)</td>
+            <td>LIB</td>
+        </tr>
+        <tr>
+            <td class="day">FRI</td>
+            <td>WT</td>
+            <td>ML</td>
+            <td>CSE</td>
+            <td>ML</td>
+            <td colspan="2">CP Room No. 1810</td>
+        </tr>
+    </table>
+
+</body>
+</html>

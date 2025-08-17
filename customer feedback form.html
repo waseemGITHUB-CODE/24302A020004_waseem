@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Customer Feedback Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 550px;
+      margin: auto;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #74b9ff;
+      box-shadow: 0 0 8px rgba(116,185,255,0.6);
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .rating, .recommend {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding: 8px 0;
+    }
+    .rating label, .recommend label {
+      font-weight: normal;
+      color: #555;
+    }
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    input[type="reset"] {
+      background-color: #dc3545;
+      color: white;
+    }
+    input[type="reset"]:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📱 Phone Customer Feedback Form</h1>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="model">Which phone model are you giving feedback for?</label>
+      <input type="text" id="model" name="model" placeholder="e.g., iPhone 15, Samsung S24" required>
+
+      <label>How would you rate your phone?</label>
+      <div class="rating">
+        <label><input type="radio" name="rating" value="1"> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </div>
+
+      <label for="purchase">Where did you purchase your phone?</label>
+      <select id="purchase" name="purchase">
+        <option value="online">Online</option>
+        <option value="store">Physical Store</option>
+        <option value="gift">It was a gift</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>Which features are you satisfied with?</label>
+      <label><input type="checkbox" name="features" value="battery"> Battery Life</label><br>
+      <label><input type="checkbox" name="features" value="camera"> Camera</label><br>
+      <label><input type="checkbox" name="features" value="performance"> Performance</label><br>
+      <label><input type="checkbox" name="features" value="design"> Design</label><br>
+      <label><input type="checkbox" name="features" value="software"> Software Updates</label>
+
+      <label>Would you recommend this phone to others?</label>
+      <div class="recommend">
+        <label><input type="radio" name="recommend" value="yes"> Yes</label>
+        <label><input type="radio" name="recommend" value="no"> No</label>
+      </div>
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..." required></textarea>
+
+      <label for="improve">What would you like to see improved?</label>
+      <textarea id="improve" name="improve" rows="3" placeholder="Write your suggestions..."></textarea>
+
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

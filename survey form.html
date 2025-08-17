@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Feedback Survey</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #16a34a;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 32px 16px;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+    p.desc {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    form { display: grid; gap: 16px; }
+
+    .row { display: grid; gap: 12px; }
+    @media (min-width: 640px) {
+      .row.two { grid-template-columns: 1fr 1fr; }
+    }
+
+    label { font-weight: 600; font-size: 14px; }
+    .hint { color: var(--muted); font-size: 12px; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      font: inherit;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    fieldset { border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+    legend { padding: 0 6px; font-weight: 700; font-size: 14px; }
+
+    .options { display: grid; gap: 6px; padding: 6px 2px; }
+    .inline { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+
+    .actions { display: flex; gap: 12px; margin-top: 8px; }
+    button, input[type="submit"], input[type="reset"] {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    input[type="reset"] { background: #6b7280; }
+
+    .required { color: #ef4444; margin-left: 4px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Event Feedback Survey</h1>
+      <p class="desc">Thanks for attending! Please share your thoughts about the event. Fields marked with <span class="required">*</span> are required.</p>
+    </header>
+
+    <form action="#" method="post">
+      <div class="row two">
+        <div>
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="e.g., John Doe" required />
+        </div>
+        <div>
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="event">Which event did you attend? <span class="required">*</span></label>
+        <select id="event" name="event" required>
+          <option value="" selected disabled>Choose…</option>
+          <option>Tech Conference 2025</option>
+          <option>Music Festival</option>
+          <option>Art Exhibition</option>
+          <option>Sports Meet</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>How did you hear about this event?</legend>
+        <div class="options inline">
+          <label><input type="radio" name="ref" value="friends" /> Friends/Family</label>
+          <label><input type="radio" name="ref" value="social" /> Social Media</label>
+          <label><input type="radio" name="ref" value="ads" /> Advertisements</label>
+          <label><input type="radio" name="ref" value="website" /> Event Website</label>
+          <label><input type="radio" name="ref" value="other" /> Other</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Rate the following aspects</legend>
+        <div class="options">
+          <label>Event Organization: 
+            <select name="org_rating">
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </label>
+          <label>Speakers/Performers: 
+            <select name="speaker_rating">
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </label>
+          <label>Venue & Facilities: 
+            <select name="venue_rating">
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Overall satisfaction</legend>
+        <div class="options inline">
+          <label><input type="radio" name="rating" value="1" required /> 1</label>
+          <label><input type="radio" name="rating" value="2" /> 2</label>
+          <label><input type="radio" name="rating" value="3" /> 3</label>
+          <label><input type="radio" name="rating" value="4" /> 4</label>
+          <label><input type="radio" name="rating" value="5" /> 5 (Excellent)</label>
+        </div>
+      </fieldset>
+
+      <div class="row">
+        <div>
+          <label for="feedback">What did you enjoy most about the event?</label>
+          <textarea id="feedback" name="feedback" placeholder="Share your highlights…"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="improve">What could we improve for future events?</label>
+          <textarea id="improve" name="improve" placeholder="Your suggestions…"></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </main>
+</body>
+</html>
